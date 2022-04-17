@@ -5,6 +5,7 @@ class Passageiro{
   String _nome = "";
   String _end = "";
   String _tel = "";
+  List <Voo> lista_de_voo = [];
   
   Passageiro(_cpf, _nome, _end, _tel);
 
@@ -13,22 +14,15 @@ class Passageiro{
   String get end => _end;
   String get tel => _tel;
 
-  set cpf (String cpf){
-    _cpf = cpf;
-  }
-  set nome (String nome){
-    _nome = nome;
-  } 
-  set end(String end){
-    _end = end;
+  set cpf (String cpf)=> _cpf = cpf;
+  set nome (String nome)=> _nome = nome;
+  set end(String end) => _end = end;
+  set tel(String tel) => _tel = tel;
 
-  } 
-  set tel(String tel){
-    _tel = tel;
-  } 
-
-  void txtInfo(){
-    print("+=+=+= DADOS DO PASSAGEIRO =+=+=+");
+  @override
+  String toString() {
+    // TODO: implement toString
+    return "+=\nPassageiro do CPF:$_cpf\nNome: $_nome\nEndereço: $_end\nTelefone: $_tel\n=+";
   }
 
 }
